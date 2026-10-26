@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "AI 学习助手 · 题解建议",
+  "version": "0.1.0",
+  "description": "采集当前练习页面的题目并获取 AI 解题建议，由用户逐题确认后填入；不自动提交作业。",
+  "minimum_chrome_version": "114",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*","*://*.chaoxing.com/*"],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "AI 学习助手",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*","*://*.chaoxing.com/*"],
+      "js": ["content/boot.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content/*", "content/fillers/*", "shared/*"],
+      "matches": ["http://localhost/*", "http://127.0.0.1/*","*://*.chaoxing.com/*"]
+    }
+  ]
+}

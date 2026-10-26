@@ -1,0 +1,78 @@
+# ============================================================
+# 仓库根目录 .gitignore
+# 子目录（backend/、extension/）仍有各自的 .gitignore，这里补齐
+# 跨模块通用的系统文件、编辑器配置、构建产物与本地密钥。
+# ============================================================
+
+# ---------- 操作系统 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 编辑器 / IDE ----------
+# IntelliJ IDEA（backend、extension 下已有 .idea，这里统一兜底）
+.idea/
+*.iml
+*.iws
+*.ipr
+# VS Code
+.vscode/
+# 其他编辑器临时文件
+*.swp
+*.swo
+*~
+
+# ---------- Node.js ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# ---------- 构建产物 ----------
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+.cache/
+
+# ---------- Java / Maven ----------
+target/
+*.class
+*.jar
+*.war
+
+# ---------- 日志与临时文件 ----------
+*.log
+logs/
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# ---------- 环境变量与本地配置（禁止提交密钥） ----------
+.env
+.env.*
+!.env.example
+*.local
+application-local.yml
+application-local.yaml
+application-local.properties
+
+# ---------- 扩展打包产物 ----------
+*.crx
+*.pem
+*.zip
+
+# ---------- 测试 / 演示运行产物 ----------
+playwright-report/
+test-results/

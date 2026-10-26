@@ -1,0 +1,3 @@
+题型：填空题。
+要求：selectedOptionLabels 必须为空数组；blankAnswers 按空位顺序给出，数量等于 blankCount，不允许空字符串。
+答案应尽量简短（词语或短句），不要附带序号、引号或解释。

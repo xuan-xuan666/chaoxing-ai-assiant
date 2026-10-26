@@ -1,0 +1,10 @@
+{
+  "name": "cx-ai-assistant-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome MV3 扩展：采集题目、获取 AI 解题建议、由用户确认后填入（不自动提交）。",
+  "scripts": {
+    "test": "node --test --test-isolation=none tests/answer-mapper.test.js tests/question-parser.test.js tests/snapshot-manager.test.js"
+  }
+}

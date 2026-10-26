@@ -1,0 +1,158 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 12px;
+  color: #1f2328;
+  background: #fff;
+  font-size: 13px;
+}
+
+header h1 {
+  margin: 0 0 2px;
+  font-size: 15px;
+}
+
+header .sub {
+  margin: 0 0 10px;
+  color: #8b949e;
+  font-size: 12px;
+}
+
+.status {
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f6f8fa;
+  color: #57606a;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.status.ok {
+  background: #dafbe1;
+  color: #116329;
+}
+
+.status.warn {
+  background: #fff8c5;
+  color: #6b5900;
+}
+
+.status.error {
+  background: #ffebe9;
+  color: #a40e26;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.actions button:first-child {
+  grid-column: 1 / -1;
+}
+
+button {
+  font: inherit;
+  padding: 7px 10px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  background: #f6f8fa;
+  color: #1f2328;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #eef1f4;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.primary {
+  background: #1f6feb;
+  border-color: #1f6feb;
+  color: #fff;
+}
+
+button.primary:hover:not(:disabled) {
+  background: #1a5fd0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.item {
+  padding: 6px 8px;
+  border: 1px solid #eaeef2;
+  border-radius: 6px;
+  color: #57606a;
+}
+
+.item .tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #eef1f4;
+  font-size: 11px;
+}
+
+.empty {
+  color: #8b949e;
+  font-size: 12px;
+}
+
+.settings {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid #eaeef2;
+}
+
+.settings summary {
+  cursor: pointer;
+  color: #57606a;
+}
+
+.settings label {
+  display: block;
+  margin: 8px 0;
+  color: #57606a;
+}
+
+.settings input[type="url"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 6px 8px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.settings label.check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+footer {
+  margin-top: 10px;
+  color: #8b949e;
+  font-size: 11px;
+  line-height: 1.5;
+}

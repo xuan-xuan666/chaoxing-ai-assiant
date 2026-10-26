@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>AI 学习助手</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>AI 学习助手</h1>
+      <p class="sub">采集题目 → 获取建议 → 逐题确认填入</p>
+    </header>
+
+    <section id="status" class="status">正在检测当前页面…</section>
+
+    <div class="actions">
+      <button id="collect" type="button" class="primary">1. 采集题目</button>
+      <button id="solve" type="button">2. 获取 AI 建议</button>
+      <button id="panel" type="button">显示结果面板</button>
+    </div>
+
+    <section id="list" class="list"></section>
+
+    <details class="settings">
+      <summary>设置</summary>
+      <label>
+        后端地址
+        <input id="api" type="url" placeholder="http://localhost:8080/api/v1/answers/solve" />
+      </label>
+      <label class="check">
+        <input id="mock" type="checkbox" />
+        使用内置模拟服务（后端未就绪时）
+      </label>
+      <button id="save" type="button">保存设置</button>
+    </details>
+
+    <footer>仅供核对：只填写答案，不会提交作业。</footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

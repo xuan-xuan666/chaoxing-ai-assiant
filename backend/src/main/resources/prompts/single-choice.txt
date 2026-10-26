@@ -1,0 +1,3 @@
+题型：单选题。
+要求：selectedOptionLabels 恰好包含一个选项标签，blankAnswers 必须为空数组。
+如果无法确定唯一答案，返回 status=UNCERTAIN。

@@ -1,0 +1,3 @@
+题型：多选题。
+要求：selectedOptionLabels 至少包含一个选项标签且不得重复，blankAnswers 必须为空数组。
+只返回题干明确支持的选项，不要为了凑数量多选。

@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  application:
+    name: cx-ai-backend
+  # 本项目只提供 JSON 接口，关闭静态资源映射，避免无意义的资源探测。
+  web:
+    resources:
+      add-mappings: false
+
+app:
+  ai:
+    # true：使用内置模拟模型客户端（无需密钥，便于联调）
+    # false：调用 OpenAI 兼容接口，需要同时配置 api-key
+    mock: false
+    base-url: https://api.deepseek.com
+    api-key: sk-014daaafb1a6429998a52a1d938d518c
+    model: deepseek-flash
+    timeout-ms: 20000
+    max-questions-per-batch: 50
+    max-output-tokens: 2000
+  cors:
+    # 留空表示不开启跨域。扩展后台带 host_permissions 发请求时不需要 CORS；
+    # 只有从普通网页直接调用本服务时才需要填来源，例如 http://localhost:8080
+    allowed-origins: ""
+
+logging:
+  level:
+    com.work1.backend: INFO
